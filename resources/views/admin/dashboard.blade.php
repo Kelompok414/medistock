@@ -22,7 +22,7 @@
                 <div class="summary-card">
                     <div class="card-header">
                         <div class="card-icon">
-                            <img src="{{ asset('assets/images/trending-down.png') }}" alt="Akan Kadaluarsa">
+                            <img src="{{ asset('assets/images/alert-circle.png') }}" alt="Akan Kadaluarsa">
                         </div>
                         <h3 class="card-title">Akan Kadaluarsa</h3>
                     </div>
@@ -48,7 +48,7 @@
                 <div class="summary-card">
                     <div class="card-header">
                         <div class="card-icon">
-                            <img src="{{ asset('assets/images/report.png') }}" alt="Stok Menipis">
+                            <img src="{{ asset('assets/images/trending-down.png') }}" alt="Stok Menipis">
                         </div>
                         <h3 class="card-title">Stok Menipis</h3>
                     </div>
