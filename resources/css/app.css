@@ -78,7 +78,7 @@ body {
     align-items: center;
     margin-bottom: 15px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--black);
 }
 
@@ -102,7 +102,7 @@ body {
     align-items: center;
     padding: 12px 15px;
     border-radius: 8px;
-    color: var(--grey);
+    color: var(--black);
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -166,7 +166,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 15px;
-    color: var(--grey);
+    color: var(--black);
     background: none;
     border: none;
     cursor: pointer;
@@ -271,37 +271,4 @@ tbody tr:hover {
 .badge-danger {
     background-color: var(--red-light);
     color: var(--red);
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-    .admin-layout {
-        flex-direction: column;
-        padding: 40px 20px; 
-    }
-    
-    .menu-box, .main-content {
-        width: 100%;
-    }
-    
-    .search-container {
-        padding: 10px 20px; 
-    }
-}
-
-@media (max-width: 768px) {
-    .admin-layout {
-        padding: 40px 10px 10px; 
-    }
-    
-    .search-container {
-        padding: 10px;
-        flex-direction: column;
-        gap: 10px;
-        height: auto;
-    }
-    
-    .notification-icon {
-        align-self: flex-end;
-    }
 }

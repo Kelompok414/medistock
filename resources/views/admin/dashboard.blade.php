@@ -14,7 +14,7 @@
                         <h3 class="card-title">Total Obat</h3>
                     </div>
                     <div class="card-content">
-                        <div class="card-value">1,245</div>
+                        <div class="card-value green">1,245</div>
                         <div class="card-subtitle">25 obat baru</div>
                     </div>
                 </div>

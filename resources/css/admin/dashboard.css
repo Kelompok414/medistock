@@ -97,12 +97,12 @@
 }
 
 .card-icon img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .card-title {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--black);
   margin: 0;
@@ -116,9 +116,13 @@
 .card-value {
   font-size: 24px;
   font-weight: 500;
-  color: var(--primary);
+  color: var(--black);
   line-height: 1.2;
   margin-bottom: 5px;
+}
+
+.card-value.green {
+  color: var(--green);
 }
 
 .card-value.red {
@@ -150,6 +154,7 @@
 /* Notification panel - Menyesuaikan lebar agar sesuai dengan card ke-4 */
 .notification-panel {
   grid-column: span 1; 
+  position: relative;
 }
 
 /* Panel common styles */
@@ -269,8 +274,8 @@
 }
 
 .notification-icon.small {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -280,8 +285,8 @@
 }
 
 .notification-icon.small img {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
 
 .notification-icon.danger {
@@ -294,6 +299,18 @@
 
 .notification-icon.info {
   background-color: rgba(0, 123, 255, 0.1);
+}
+
+.notification-icon.small.danger img {
+  filter: invert(27%) sepia(90%) saturate(1967%) hue-rotate(343deg) brightness(105%) contrast(101%);
+}
+
+.notification-icon.small.warning img {
+  filter: invert(83%) sepia(29%) saturate(5162%) hue-rotate(359deg) brightness(101%) contrast(104%);
+}
+
+.notification-icon.small.info img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
 
 .notification-content {
@@ -314,8 +331,8 @@
 
 .notification-date {
   font-size: 11px;
-  color: var(--grey);
-  background-color: #f0f0f0;
+  color: white;
+  background-color: var(--grey);
   display: inline-block;
   padding: 3px 8px;
   border-radius: 50px;
@@ -343,82 +360,4 @@
 
 .expiry-table tbody tr td.days-expired {
   color: var(--red);
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-  .summary-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .dashboard-panels {
-    grid-template-columns: 1fr;
-  }
-  
-  .expiry-panel, .notification-panel {
-    grid-column: span 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .summary-cards {
-    grid-template-columns: 1fr;
-  }
-  
-  .search-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .notification-icon {
-    align-self: flex-end;
-  }
-  
-  .expiry-table {
-    border-spacing: 0 5px;
-  }
-  
-  .expiry-table thead {
-    display: none;
-  }
-  
-  .expiry-table tbody, .expiry-table tr, .expiry-table td {
-    display: block;
-    width: 100%;
-  }
-  
-  .expiry-table tbody tr {
-    margin-bottom: 15px;
-    border-radius: 8px;
-  }
-  
-  .expiry-table tbody tr td {
-    text-align: right;
-    padding: 10px 15px;
-    position: relative;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-  }
-  
-  .expiry-table tbody tr td:last-child {
-    border-bottom: none;
-  }
-  
-  .expiry-table tbody tr td:before {
-    content: attr(data-label);
-    float: left;
-    font-weight: 500;
-    color: var(--grey);
-  }
-  
-  .expiry-table tbody tr td:first-child {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 0;
-  }
-  
-  .expiry-table tbody tr td:last-child {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 0;
-  }
 }
